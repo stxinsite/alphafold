@@ -22,7 +22,7 @@ from absl import logging
 
 
 @contextlib.contextmanager
-def tmpdir_manager(base_dir: Optional[str] = None):
+def tmpdir_manager(base_dir: Optional[str] = "/scratch"):
   """Context manager that deletes a temporary directory on exit."""
   tmpdir = tempfile.mkdtemp(dir=base_dir)
   try:
